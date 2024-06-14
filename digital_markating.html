@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dpanyaa Creative Agency</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+.recipe-carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.slick-prev:before, .slick-next:before {
+            color: #007bff;
+        }
+
+        .slick-prev:hover:before, .slick-next:hover:before {
+            color: #0056b3;
+        }
+
+/* .slick-arrow{
+  color:black;
+  background-color: black;
+} */
+
+.recipe-card {
+    text-align: center;
+    padding: 10px;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev-button, .next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #0056b3;
+}
+
+.Syts {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .tablink {
+        background-color: #e9e5ff;
+        color: black;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 33.33%;
+        text-align: center;
+      }
+
+      /* .tablink:hover {
+        background-color: #777;
+        color: rgb(0, 0, 0);
+      } */
+
+      .tabcontent {
+        color: black;
+        display: none;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      #Home,
+      #News,
+      #Contact {
+        background-color: white;
+      }
+
+      .navbar {
+        margin-bottom: 0;
+        padding: 20px;
+
+      }
+
+      .section {
+        padding-top: 50px;
+        height: auto;
+        color: black;
+        background-color: #f5f5f5;
+        padding: 50px 20px;
+      }
+
+      #section1 {
+        background-image: url("./bg-image.webp");
+        background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:150px;
+    padding-left: 22%;
+      }
+      #section2 {
+        background-color: #ffffff;
+      }
+      #section3 {
+        background-color: #e9e5ff;
+      }
+      #section41 {
+        background-color: #e9e5ff;
+      }
+      #section42 {
+        background-color: #ffffff;
+      }
+      #section43 {
+        background-color: #e9e5ff;
+      }
+      .card {
+        background-color: white;
+        margin-bottom: 20px; /* Added margin between cards */
+        padding: 20px; /* Added padding inside each card */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: auto;
+      }
+
+      .card img {
+        max-width: 100%; /* Ensure images inside cards are responsive */
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .nav {
+        margin-left: 23%;
+        margin-right: auto;
+        margin-top: 25px;
+      }
+
+      h1,
+      h4 {
+        text-align: center;
+      }
+
+      p {
+        text-align: justify;
+        margin: 20px 0;
+      }
+
+      .footer {
+            background-color: #e9e5ff;
+            padding:0px;
+        }
+
+        .footer h5 {
+            margin-bottom: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #343a40;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons {
+            display: flex;
+        }
+
+        .footer .social-icons a {
+            font-size: 20px;
+            color: #343a40;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .footer .social-icons a:hover {
+            color: #007bff;
+        }
+
+      @media (max-width: 768px) {
+        .tabcontent {
+          padding: 10px; /* Adjusted padding for smaller screens */
+        }
+        #section1{
+          padding:10px;
+        }
+
+        .tablink {
+          width: 100%; /* Full width for tab links on small screens */
+          float: none;
+        }
+      }
+      .navbar {
+      margin-bottom: 0;
+      padding: 0px !important;
+      border-radius: 0;
+      background-color: #333;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle {
+      border-color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 10px;
+      }
+
+      .navbar-header {
+        float: none;
+      }
+
+      .navbar-left,.navbar-right {
+        float: none !important;
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+
+      .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      }
+
+      .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+      }
+
+      .navbar-collapse.collapse {
+        display: none!important;
+      }
+
+      .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+      }
+
+      .navbar-nav > li {
+        float: none;
+        margin-left: 0;
+      }
+
+      .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .collapse.in{
+        display: block !important;
+      }
+    }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="navbar-brand img-responsive" src="./Brands/Fundle logo.png" alt="Logo" style="width: 200px;height: 100px;"/>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#section1">About Us</a></li>
+            <li><a href="#section2">Our Expertise</a></li>
+            <li><a href="#section3">Our Services</a></li>
+            <li><a href="#section41">Our Clients</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br>
+    <div id="section1" class="container-fluid section">
+      <!-- <br class="d-sm-none d-md-none d-lg-none"><br class="d-sm-none d-md-none d-lg-none"><br class="d-sm-none d-md-none d-lg-none"><br class="d-sm-none d-md-none d-lg-none"><br class="d-sm-none d-md-none d-lg-none"> -->
+      <h4 style="text-align: left !important;">Welcome to Dpanyaa Creative Agency:</h4>
+      <h1 style="text-align: left !important;">
+        Navigating the <br />
+        Digital Marketing <br />
+        Services in Hyderabad
+      </h1>
+      <p style="text-align: left !important;">
+        In the vibrant heart of Hyderabad, where tradition meets technology,<br>
+        Dpanyaa Creative Agency stands as your guiding light in the vast galaxy<br>
+        of digital marketing. Our unwavering commitment to best digital<br>
+        marketing services in Hyderabad digital brilliance serves as the compass<br>
+        in Hyderabad’s pulsating digital landscape.
+      </p>
+    
+  </div>
+
+    <div id="section2" class="container section">
+      <h1>Our Digital Journey</h1>
+      <p>
+        Dpanyaa Creative Agency is more than just an agency; it’s a digital
+        odyssey, a transformative tale. Located in the bustling heart of
+        Hyderabad, we draw inspiration from the city’s rich cultural tapestry
+        and its constant spirit of innovation. Our journey is a harmonious blend
+        of creativity, local insights, and an unyielding pursuit of a Digital
+        marketing agency in Hyderabad excellence.
+      </p>
+    </div>
+
+    <div id="section3" class="container section">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <h1>The Essence of Our Expertise</h1>
+          <div class="text-center">
+            <button
+              class="tablink"
+              onclick="openPage('Home', this, 'white')"
+              id="defaultOpen"
+            >
+              HYDERABAD'S DIGITAL ALCHEMISTS
+            </button>
+            <button class="tablink" onclick="openPage('News', this, 'white')">
+              TAILORED ENCHANTMENTS
+            </button>
+            <button
+              class="tablink"
+              onclick="openPage('Contact', this, 'white')"
+            >
+              INNOVATIVE <br />
+              SORCERY
+            </button>
+          </div>
+
+          <div id="Home" class="tabcontent">
+            <p style="padding: 40px">
+              We adeptly navigate the intricate maze of digital marketing
+              services, guided by the city’s dynamism. From the historic charm
+              of Charminar to the technological pulse of Hi-Tech City, we
+              seamlessly blend tradition with innovation.
+            </p>
+          </div>
+
+          <div id="News" class="tabcontent">
+            <p style="padding: 40px">
+              At Dpanyaa Creative Agency, we specialize in crafting bespoke
+              digital marketing strategies tailored to your brand’s unique
+              identity. Our approach is not just engaging; it’s enchanting,
+              breathing life into your brand and captivating your audience.
+            </p>
+          </div>
+
+          <div id="Contact" class="tabcontent">
+            <p style="padding: 40px">
+              In a realm of constant transformation, we are the architects of
+              innovation. Our team concocts precision strategies infused with
+              creative brilliance, crafting campaigns that deliver
+              transformative results.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+          <img
+            src="./marketing-robo-2048x864.png.webp"
+            width="100%"
+            alt="hand"
+          />
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div id="section41" class="container section">
+      <h1>Our Spectrum of Services</h1>
+      <h4>Explore the array of services Dpanyaa Creative Agency offers:</h4>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="#" alt="Digital Marketing" />
+            <h5>Digital Marketing 360:</h5>
+            <p>
+              Digital Marketing 360 encompasses a comprehensive approach to your
+              online presence, ensuring a holistic strategy that covers all
+              facets of digital marketing services. From SEO and social media to
+              paid advertising and content creation, our Top Digital Marketing
+              Services in Hyderabad are designed to elevate your brand's
+              visibility, engagement, and conversion rates across all digital
+              channels. With a blend of creativity, analytics, and strategic
+              thinking, we craft tailored solutions to meet your specific goals
+              and objectives, providing a 360-degree view of your digital
+              marketing landscape.<br /><br /><br />
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="#" alt="SEO" />
+            <h5>SEO</h5>
+            <p>
+              Search Engine Optimization is the cornerstone of a successful
+              online presence. Our SEO services are designed to optimize your
+              website's visibility in search engine results, ensuring that your
+              brand appears prominently when potential customers search for
+              relevant keywords. Through a combination of keyword research,
+              on-page optimization, content creation, and technical
+              enhancements, we enhance your website's organic search rankings,
+              driving targeted traffic and increasing your online visibility.
+              With our SEO expertise, we help you climb the ranks and establish
+              your dominance in the digital realm.<br /><br /><br />
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="#" alt="Paid Search" />
+            <h5>Paid Search Marketing:</h5>
+            <p>
+              Paid Search Marketing, or PPC (Pay-Per-Click) advertising, is a
+              highly effective way to drive targeted traffic to your website and
+              generate leads. Our Paid Search Marketing services involve
+              strategic keyword targeting, compelling ad copy creation, and
+              ongoing campaign optimization to maximize your ROI. Whether
+              through Google Ads, Bing Ads, or other paid search platforms, we
+              leverage data-driven insights and advanced targeting techniques to
+              ensure your ads reach the right audience at the right time,
+              including those searching for *Digital Marketing Services in
+              Hyderabad*. With our PPC expertise, we help you achieve rapid
+              ascent in the digital sphere, driving qualified leads and boosting
+              conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="#" alt="SMM" />
+            <h5>Social Media Marketing (SMM)</h5>
+            <p>
+              Social Media Marketing is a vital component of our comprehensive
+              digital marketing services in Hyderabad. It serves as a powerful
+              tool for engaging with your audience and building brand awareness.
+              Our SMM services focus on crafting compelling stories and engaging
+              content that resonates with your target audience across various
+              social media platforms. From Facebook and Instagram to Twitter and
+              LinkedIn, we employ tailored strategies to maximize your digital
+              marketing presence, drive user engagement, and foster meaningful
+              connections with your followers. With our SMM expertise, we help
+              you leverage the dynamic canvas of social platforms to captivate
+              your audience and elevate your brand's visibility. As the best
+              digital marketing agency in Hyderabad, we ensure that your brand
+              stands out amidst the competition, establishing itself as a top
+              player in the market.<br /><br />
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="#" alt="CRO" />
+            <h5>Conversion Rate Optimization (CRO)</h5>
+            <p>
+              Conversion Rate Optimization (CRO) is an integral part of our
+              digital marketing services in Hyderabad. It's the process of
+              improving your website's performance to increase the percentage of
+              visitors who take a desired action, such as making a purchase or
+              filling out a contact form. Our CRO services involve analyzing
+              user behavior, conducting A/B testing, and implementing strategic
+              optimizations to enhance your website's conversion rates. Whether
+              it's optimizing your landing pages, streamlining the checkout
+              process, or improving call-to-action buttons, we employ
+              data-driven strategies to maximize your website's conversion
+              potential. With our CRO expertise, we help you nurture leads,
+              foster timeless customer relationships, and achieve sustainable
+              growth. As the top digital marketing agency in Hyderabad, we
+              ensure that every aspect of your online presence is optimized for
+              maximum conversion and success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section42" class="container section">
+      <h1>Why Choose Our Enchanted Fellowship?</h1>
+      <p>
+        A Join us, and embark on a journey with a fellowship of digital
+        sorcerers dedicated to your digital sovereignty. Our magic lies in
+        results – whether it’s increased web traffic, expanded social dominion,
+        or the transformation of visitors into passionate advocates.
+      </p>
+    </div>
+
+
+    <div class="container-fluid" id="section43">
+      <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img
+            src="./woman-influencer-marketing-2048x1365.jpg.webp"
+            width="100%"
+            alt="lapi"
+          />
+        </div>
+        <div class="col-sm-6">
+          <h1>Your Magical Commencement</h1>
+          <p>
+            The gateway to your digital destiny awaits. Reach out to us today,
+            and we’ll convene for a consultation. Together, we’ll decode your
+            needs, unveil your aspirations, and craft bespoke spells tailored to
+            your goals and objectives. Hyderabad’s chosen have embraced us, and
+            you can become one of them. Dpanyaa Creative Agency isn’t just a
+            provider; we’re your companions on the path to digital enchantment,
+            where every click, every pixel, and every strategy is infused with
+            magic. As the Best Digital Marketing Company in Hyderabad, We’re
+            committed to guiding you towards success in the digital realm
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container" >
+  <h1>Our Clients</h1>
+<br>
+  <div class="recipe-carousel-container">
+    <div class="recipe-carousel">
+        <div class="recipe-card">
+            <img src="./Brands/Awala.png" alt="Recipe 1" />
+        </div>
+        <div class="recipe-card">
+            <img src="./Brands/Baby steps.png" alt="Recipe 2" />
+        </div>
+        <div class="recipe-card">
+            <img src="./Brands/Buddyz logo.png" alt="Recipe 3" />
+        </div>
+        <div class="recipe-card">
+            <img src="./Brands/FS_LOGO_PNG.png" alt="Recipe 4" />
+        </div>
+    </div>
+ 
+</div>
+<br><br><br><br>
+</div>
+
+
+
+<div class="container" style="background-color: #e9e5ff;">
+    <footer class="footer" >
+    <div class="row">
+      <div class="col-md-4" style="padding: 40px">
+        <img src="./Brands/logo.png" alt="Papa">
+        <p>Dpanyaa is a leading digital marketing agency dedicated to empowering businesses with innovative strategies tailored to their unique needs.</p>
+      </div>
+      <div class="col-md-4" style="padding: 40px">
+        <h5>Contact Us</h5>
+        <ul>
+          <li><a href="#section1">Sri Dwarakamai Complex,
+            HIG 132 4th Floor, KPHB COLONY,
+            PHASE VI, Hyderabad, Telangana 500085.
+            </a></li>
+          <li><a href="#section2">marketing@dpanyaa.com</a></li>
+          <li><a href="#section3">+91 74163 59846</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4" style="padding: 40px">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+    function slickNext() {
+        $('.recipe-carousel').slick('slickNext');
+    }
+
+    function slickPrev() {
+        $('.recipe-carousel').slick('slickPrev');
+    }
+
+    $(document).ready(function () {
+        $('.recipe-carousel').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
+        });
+    });
+
+
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
